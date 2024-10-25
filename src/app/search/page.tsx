@@ -32,7 +32,7 @@ export default function Search() {
                             <div key={index} className="space-y-1 border-b border-gray-200 pb-4 mb-4">
                                 {facetItem.display === "dropdown" && facetItem.options && facetItem.options.length > 0 && (
                                     <div>
-                                        <label htmlFor={`facet-${index}`} className="block mb-2">{facetItem.name}</label>
+                                        <label htmlFor={`facet-${facetItem.slug}`} className="block mb-2">{facetItem.name}</label>
                                         <small>{facetItem.description}</small>
                                         <select
                                             id={`facet-${facetItem.slug}`}
@@ -45,7 +45,7 @@ export default function Search() {
                                 )}
                                 {facetItem.display === "textbox" && (
                                     <div>
-                                        <label htmlFor={`facet-${index}`} className="block mb-2">{facetItem.name}</label>
+                                        <label htmlFor={`facet-${facetItem.slug}`} className="block mb-2">{facetItem.name}</label>
                                         <small className="block mb-1 text-gray-500">{facetItem.description}</small>
                                         <input
                                             type="text"
@@ -55,7 +55,7 @@ export default function Search() {
                                 )}
                                 {facetItem.display === "range" && (
                                     <div>
-                                        <label htmlFor={`facet-${index}`} className="block mb-2">{facetItem.name}</label>
+                                        <label htmlFor={`facet-${facetItem.slug}`} className="block mb-2">{facetItem.name}</label>
                                         <small className="block mb-1 text-gray-500">{facetItem.description}</small>
                                         <input
                                             id={`facet-${facetItem.slug}`}
