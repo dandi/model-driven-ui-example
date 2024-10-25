@@ -1,0 +1,69 @@
+faceted_search:
+  facets:
+    - name: "File Size"
+      slug: "filesize"
+      field: "contentSize"
+      type: "numeric"
+      description: "File size in bytes"
+      display: "range"
+      min: 1
+      max: 5000
+      unit: "bytes"
+
+    - name: "File Type"
+      slug: "filetype"
+      field: "encodingFormat"
+      type: "term"
+      description: "Format of the file (e.g., NWB)"
+      display: "dropdown"
+      options:
+        - "txt"
+        - "nwb"
+        - "csv"
+        - "json"
+        - "h5"
+
+
+    - name: "Species"
+      slug: "species"
+      field: "wasAttributedTo.species.name"
+      type: "term"
+      description: "Species involved in the dataset"
+      display: "dropdown"
+      options:
+        - "Mouse"
+        - "Rat"
+        - "Human"
+        - "Zebrafish"
+        - "Fly"
+
+    - name: "Research Approach"
+      slug: "research_approach"
+      field: "approach.name"
+      type: "term"
+      description: "Research approach or method used in the dataset"
+      display: "dropdown"
+      options:
+        - "In Vivo"
+        - "In Vitro"
+        - "Computational"
+        - "Behavioral"
+        - "Genetic"
+
+
+    - name: "Variable Measured"
+      slug: "variables_measured"
+      field: "variableMeasured.value"
+      type: "term"
+      description: "Variables measured in the dataset"
+      display: "textbox"
+
+  options:
+    default_sort: "dateModified"
+    display_limit: 10
+    allow_multiple: true
+    sort_options:
+      - field: "dateModified"
+        order: "desc"
+      - field: "contentSize"
+        order: "desc"
