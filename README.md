@@ -1,5 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It contains an example to setup UI using model-driven approach.
 
+![](images/landing.png)
+![](images/search.png)
 ## Getting Started
 
 First, run the development server:
